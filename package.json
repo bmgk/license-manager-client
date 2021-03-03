@@ -3,8 +3,14 @@
   "version": "0.1.0",
   "private": false,
   "dependencies": {
+    "@auth0/auth0-react": "^1.3.0",
+    "baseui": "^9.110.0",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-query": "^3.12.0",
+    "react-router-dom": "^5.2.0",
+    "styletron-engine-atomic": "^1.4.7",
+    "styletron-react": "^6.0.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.4",
@@ -14,6 +20,12 @@
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "@types/react-router-dom": "^5.1.7",
+    "@types/styletron-engine-atomic": "^1.1.0",
+    "@types/styletron-react": "^5.0.2",
+    "@types/styletron-standard": "^2.0.1",
+    "eslint-plugin-baseui": "^9.110.0",
+    "msw": "^0.27.0",
     "react-scripts": "4.0.3",
     "typescript": "^4.1.2"
   },
@@ -24,10 +36,18 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
+    "plugins": [
+      "baseui"
+    ],
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "rules": {
+      "baseui/deprecated-theme-api": "warn",
+      "baseui/deprecated-component-api": "warn",
+      "baseui/no-deep-imports": "warn"
+    }
   },
   "browserslist": {
     "production": [
@@ -40,5 +60,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }
