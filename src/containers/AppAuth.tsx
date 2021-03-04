@@ -12,7 +12,6 @@ const AppAuth = () => {
       <Navbar />
       <Block
         paddingTop="4rem"
-        width={["320px", "600px", "1200px"]}
         margin="0 auto"
       >
         <Switch>

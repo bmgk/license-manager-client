@@ -26,7 +26,7 @@ const Navbar = () => {
   const handleItemSelect = (item: NavItemT) => {
     if (item.label === DASHBOARD) {
       setMainItems((prev) => setItemActive(prev, item));
-      history.push("/dashboard");
+      history.push("/");
     }
     if (item.label === SETTINGS) {
       setMainItems((prev) => setItemActive(prev, item));

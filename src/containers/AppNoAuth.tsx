@@ -1,12 +1,14 @@
 import * as React from "react";
-import LoginButton from "../components/auth/LoginButton";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const AppNoAuth = () => {
-  return (
-    <div>
-      <LoginButton />
-    </div>
-  );
+  const { loginWithRedirect } = useAuth0();
+
+  React.useEffect(() => {
+    loginWithRedirect();
+  }, [loginWithRedirect]);
+
+  return <></>;
 };
 
 export default AppNoAuth;
